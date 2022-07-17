@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package meta;
+
+
+message File {
+    string filename = 1;
+    string url = 2;
+    string sha256 = 3;
+    string blake2b = 4;
+}
+
+
+message Project {
+    string name = 1;
+    repeated File files = 2;
+}
+
+message Projects {
+    repeated Project projects = 1;
+}
